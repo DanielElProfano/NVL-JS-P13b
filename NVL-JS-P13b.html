@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript" >
+	
+/*Código de la práctica: NVL-JS-P13b
+Tiempo orientativo de ejecución: 25-35 minutos
+
+Queremos realizar una función que detecte palíndromos. O_o.
+Sí, palíndromo. Son palabras o frases que da igual si las lees de izquierda a derecha, que de derecha a izquierda, vas a entender lo mismo.*/
+
+var frase =[];
+var frase1=[];
+var palabra =prompt('Ingrese palíndromo: ','');
+var frase = palabra.toLowerCase();//convierrto todo a minusculas.
+
+var frase1 = frase.split(" "); //elimino espacios para poder introducir frases.
+
+var frase2 = frase1.join(""); //contiene la frase/palabra en minusculas y sin espacios, este valor lo mando a la funcion para que la analice.
+
+var resultado = palindromo(frase2);
+
+
+if (resultado == true)
+	{
+		alert("palindromo");
+	}
+else{
+		alert("no es palindromo");
+}
+
+function palindromo(frase)
+{
+	var x = frase.length;
+	for (var i = 0; i<frase.length; i++)
+		{
+			var compi = frase[i];
+	
+
+			var compx = frase[x-1];
+		
+			
+			if (compi == compx){
+				x--;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		return true;
+}
+
+
+
+
+
+</script>
+</html>
